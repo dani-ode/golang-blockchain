@@ -148,7 +148,7 @@ func (cli *CommandLine) send(from, to string, amount int, nodeID string, mineNow
 	}
 	wallet := wallets.GetWallet(from)
 
-	tx := blockchain.NewTransaction(&wallet, to, amount, &UTXOSet)
+	tx := blockchain.NewTransaction(wallet, to, amount, &UTXOSet)
 	if mineNow {
 		cbTx := blockchain.CoinbaseTx(from, "")
 		txs := []*blockchain.Transaction{cbTx, tx}

@@ -1,1 +1,6 @@
-tmp/
+# Ignore all runtime data generated under the tmp folder
+/tmp/*
+/tmp/**
+
+# Keep the folder itself present if needed
+!/tmp/
